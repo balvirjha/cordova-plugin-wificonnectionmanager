@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-wificonnectionmanager",
+  "version": "0.0.2",
+  "description": "WIFI settings and cofiguratiuons along with send user to WIFI settings page if not connected to particular WIFI",
+  "cordova": {
+    "id": "cordova-plugin-wificonnectionmanager",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Balvier Jha",
+  "license": "ISC"
+}

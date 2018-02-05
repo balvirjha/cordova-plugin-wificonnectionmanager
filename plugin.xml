@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-wificonnectionmanager" version="0.0.1" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>WIFIConnectionManager</name>
+    <js-module name="WIFIConnectionManager" src="www/WIFIConnectionManager.js">
+        <clobbers target="cordova.plugins.WIFIConnectionManager" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="WIFIConnectionManager">
+                <param name="android-package" value="cordova.plugin.wificonnectionmanager.WIFIConnectionManager" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+        </config-file>
+        <source-file src="src/android/WIFIConnectionManager.java" target-dir="src/cordova-plugin-wificonnectionmanager/WIFIConnectionManager" />
+    </platform>
+</plugin>
